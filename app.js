@@ -18,13 +18,13 @@ io.on('connect', (socket) => {
     console.log('un membre du groupe est connecté')
 
     //username par défaut
-    socket.username = "Member"
+    socket.username = "Member";
 
     socket.on('change_username', (data) => {
         socket.username = data.username
     })
 
     socket.on('new_message',(data) => {
-        io.sockets.emit('new_message', {message: data.message, username:socket.username})
+        io.sockets.emit('new_message', {message: data.message, username: socket.username})
     })
 })
