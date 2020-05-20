@@ -1,4 +1,4 @@
-# Mini groupe WhatsApp en nodeNjs
+# Mini groupe WhatsApp en node.js
 Side Project #2 : 
 
 Stack :
