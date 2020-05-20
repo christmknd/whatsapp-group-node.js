@@ -19,10 +19,12 @@ $(function() {
     //ecrire un message
     send_message.click(() => {
         socket.emit('new_message',{message: message.val()})
+        message.val('')
     })
 
     socket.on('new_message',(data) => {
-        chatroom.append("<p class='message'>"+ data.username + ":" + data.message + "</p>")
+        chatroom.append("<p class='message'>"+ data.username + " : " + data.message + "</p>")
+        is_writing.html('')
     })
 
     //"..." est en train d'écrire
