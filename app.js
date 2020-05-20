@@ -17,7 +17,6 @@ const io = require('socket.io')(server)
 io.on('connect', (socket) => {
     console.log('un membre du groupe est connecté')
 
-    //username par défaut
     socket.username = "Member";
 
     socket.on('change_username', (data) => {
@@ -26,5 +25,9 @@ io.on('connect', (socket) => {
 
     socket.on('new_message',(data) => {
         io.sockets.emit('new_message', {message: data.message, username: socket.username})
+    })
+
+    socket.on('typing',(data) => {
+        socket.broadcast.emit('typing', {username: socket.username})
     })
 })

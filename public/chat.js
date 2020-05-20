@@ -8,6 +8,7 @@ $(function() {
     var send_message = $("#send_message")
     var send_username = $("#send_username")
     var chatroom = $("#chatroom")
+    var is_writing =$("#is_writing")
 
     //username
     send_username.click(function(){
@@ -22,6 +23,16 @@ $(function() {
 
     socket.on('new_message',(data) => {
         chatroom.append("<p class='message'>"+ data.username + ":" + data.message + "</p>")
+    })
+
+    //"..." est en train d'écrire
+
+    message.bind("keypress", () => {
+        socket.emit('typing')
+    })
+
+    socket.on('typing', (data) => {
+        is_writing.html("<p><i>" + data.username + " est en train d'écrire" + "</i><p>")
     })
     
 });
