@@ -15,7 +15,7 @@ server = app.listen(3000)
 const io = require('socket.io')(server)
 
 io.on('connect', (socket) => {
-    console.log('un membre du groupe est connecté')
+    console.log('un utilisateur vient de se connecter');
 
     socket.username = "Member";
 
@@ -31,4 +31,9 @@ io.on('connect', (socket) => {
     socket.on('typing',(data) => {
         socket.broadcast.emit('typing', {username: socket.username})
     })
+
+    socket.on('disconnect', () => {
+        console.log('un membre du groupe s\'est déconnecté')
+    })
+
 })
