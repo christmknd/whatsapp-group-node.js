@@ -16,4 +16,11 @@ const io = require('socket.io')(server)
 
 io.on('connect', (socket) => {
     console.log('un membre du groupe est connecté')
+
+    //username par défaut
+    socket.username = "Member"
+
+    socket.on('change_username', (data) => {
+        socket.username = data.username
+    })
 })
