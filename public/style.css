@@ -26,20 +26,21 @@ vertical-align {
   h1 {
       font-family: 'Comfortaa', sans-serif;
       margin: 0px;
+      padding-bottom: 10px;
   }
   
   div#change_username, section#input_zone {
-      border: 5px outset #8258FA;
+      border: 5px outset green;
   }
   
   div#change_username {
       height: 3%;
       display: inline-block;
-      background-color: #BCA9F5;
+      background-color:  #e5e7e9 ;
   }
   
   section#chatroom {
-      border: 5px inset #8258FA;
+      border: 5px inset green;
       height: 85%;
       overflow: auto;
   }
@@ -47,7 +48,7 @@ vertical-align {
   section#input_zone {
       height: 7%;
       text-align: center;
-      background-color: #BCA9F5;
+      background-color: #e5e7e9;
   }
   
   .vertical-align {
