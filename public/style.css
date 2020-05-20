@@ -88,9 +88,9 @@ vertical-align {
   }
   
   .message:nth-child(even) {
-      background-color: #81DAF5;
+      background-color: #66ff66;
   }
   
   .message:nth-child(odd) {
-      background-color: #81BEF7;
+      background-color: #ccff99;
   }

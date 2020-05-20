@@ -1,2 +1,8 @@
-# chat-app-node.js
-Side Project #2 : A chat app build with Node.js , Express &amp; Socket.io
+# Mini groupe WhatsApp en nodeNjs
+Side Project #2 : 
+
+Stack :
+Node.JS
+Express
+Socket.io
+EJS 

@@ -36,6 +36,8 @@ $(function() {
     socket.on('typing', (data) => {
         is_writing.html("<p><i>" + data.username + " est en train d'écrire" + "</i><p>")
     })
+
+   
     
 });
 
